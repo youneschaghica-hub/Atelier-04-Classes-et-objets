@@ -1,3 +1,4 @@
+
 import 'dart:math';
 
 abstract class Forme {
@@ -7,6 +8,7 @@ abstract class Forme {
     print('Calcul de l\'aire...');
   }
 }
+
 class Cercle extends Forme {
   final double rayon;
 
@@ -17,6 +19,7 @@ class Cercle extends Forme {
     return pi * rayon * rayon;
   }
 }
+
 class Rectangle extends Forme {
   final double longueur;
   final double largeur;
@@ -27,4 +30,15 @@ class Rectangle extends Forme {
   double calculerAire() {
     return longueur * largeur;
   }
+}
+
+void main() {
+  var cercle = Cercle(5);
+  var rectangle = Rectangle(4, 6);
+
+  cercle.afficherMessage();
+  print('Aire du cercle : ${cercle.calculerAire()}');
+
+  rectangle.afficherMessage();
+  print('Aire du rectangle : ${rectangle.calculerAire()}');
 }
