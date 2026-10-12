@@ -14,3 +14,11 @@ class Compte {
     }
   }
 }
+void main() {
+  var compte = Compte('123456');
+
+  compte.depot(150.0);
+
+  print('Numéro de compte : ${compte.numeroCompte}');
+  print('Solde : ${compte.solde}');
+}
